@@ -395,7 +395,7 @@ Some operations on an `std::map` and `std::unordered_map` named `m` include:
   - If `key` is not present in the map, then the value associated with `key` is
     constructed using the default constructor of the value type. For example, if
     the value type is `int`, then calling `m[key]` for a key not within the map
-    sets the value associated with that key to `0`. As another example, if the
+    sets the value associated with that key to a garbage value (that is, the behavior is undefined). As another example, if the
     value type is `std::string`, then calling `m[key]` for a key not within the
     map sets the value associated with that key to the empty string. More
     discussion regarding what happens in this case can be found
